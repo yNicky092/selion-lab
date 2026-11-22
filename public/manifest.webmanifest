@@ -1,0 +1,21 @@
+{
+  "name": "Selion Lab",
+  "short_name": "Selion Lab",
+  "description": "Independent game studio building interactive worlds on real silicon physics.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#eef3f9",
+  "theme_color": "#080c14",
+  "icons": [
+    {
+      "src": "/brand/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    },
+    {
+      "src": "/brand/favicon-dark.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

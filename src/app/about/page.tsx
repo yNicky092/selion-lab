@@ -1,6 +1,22 @@
+import type { Metadata } from "next";
 import React from "react";
 import Link from "next/link";
 import styles from "./page.module.css";
+
+export const metadata: Metadata = {
+  title: "Selion Lab",
+  description:
+    "About Selion Lab, an independent studio building hardware games and simulated computer architectures with real silicon physics.",
+  alternates: {
+    canonical: "/about/",
+  },
+  openGraph: {
+    title: "Selion Lab",
+    description:
+      "About Selion Lab, an independent studio building interactive worlds on real silicon physics.",
+    url: "https://selionlab.com/about/",
+  },
+};
 
 export default function AboutPage() {
   return (
