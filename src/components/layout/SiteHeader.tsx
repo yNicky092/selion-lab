@@ -15,21 +15,17 @@ const NAV_ITEMS = [
 export function SiteHeader() {
   const pathname = usePathname();
   const [menuOpen, setMenuOpen] = useState(false);
-  const [lighting, setLighting] = useState<"daylight" | "evening">("daylight");
-
-  const toggleLighting = () => {
-    const next = lighting === "daylight" ? "evening" : "daylight";
-    setLighting(next);
-    if (typeof document !== "undefined") {
-      document.documentElement.setAttribute("data-lighting", next);
-    }
-  };
 
   return (
     <header className={styles.shell}>
       <div className="container">
         <div className={styles.capsule}>
-          <Link href="/" className={styles.brand} onClick={() => setMenuOpen(false)} aria-label="Selion Lab Home">
+          <Link
+            href="/"
+            className={styles.brand}
+            onClick={() => setMenuOpen(false)}
+            aria-label="Selion Lab Home"
+          >
             <img
               src="/brand/horizontal-lockup-light.png"
               alt="Selion Lab"
@@ -57,25 +53,15 @@ export function SiteHeader() {
             })}
           </nav>
 
-          <div className={styles.actions}>
-            <button
-              type="button"
-              onClick={toggleLighting}
-              className={styles.lightToggle}
-              aria-label="Toggle Frosted Light or VisionOS Evening Glass"
-            >
-              {lighting === "daylight" ? "Frosted Light" : "Evening Glass"}
-            </button>
-            <button
-              type="button"
-              onClick={() => setMenuOpen((v) => !v)}
-              className={styles.mobileBtn}
-              aria-expanded={menuOpen}
-              aria-label="Toggle navigation menu"
-            >
-              {menuOpen ? "Close" : "Menu"}
-            </button>
-          </div>
+          <button
+            type="button"
+            onClick={() => setMenuOpen((v) => !v)}
+            className={styles.mobileBtn}
+            aria-expanded={menuOpen}
+            aria-label="Toggle navigation menu"
+          >
+            {menuOpen ? "Close" : "Menu"}
+          </button>
         </div>
 
         {menuOpen && (

@@ -3,8 +3,7 @@
    Open editorial typography + restrained optical glass surfaces
    ============================================================ */
 
-:root,
-html[data-lighting="daylight"] {
+:root {
   --bg-canvas: #eef3f9;
   --ink-1: #0c1118;
   --ink-2: #434e61;
@@ -15,7 +14,7 @@ html[data-lighting="daylight"] {
   --rule: rgba(15, 23, 42, 0.11);
   --rule-strong: rgba(15, 23, 42, 0.24);
 
-  /* VisionOS Optical Glass Tokens (Frosted Daylight) */
+  /* VisionOS Optical Glass Tokens (Frosted Light) */
   --glass-fill: linear-gradient(
     135deg,
     rgba(255, 255, 255, 0.76) 0%,
@@ -40,38 +39,41 @@ html[data-lighting="daylight"] {
   --orb-pearl: rgba(255, 255, 255, 0.85);
 }
 
-html[data-lighting="evening"] {
-  --bg-canvas: #080c14;
-  --ink-1: #f3f7fc;
-  --ink-2: #afc0d4;
-  --ink-3: #78899f;
-  --accent-ink: #9ad8f0;
-  --btn-bg: #f3f7fc;
-  --btn-fg: #080c14;
-  --rule: rgba(255, 255, 255, 0.11);
-  --rule-strong: rgba(255, 255, 255, 0.24);
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-canvas: #080c14;
+    --ink-1: #f3f7fc;
+    --ink-2: #afc0d4;
+    --ink-3: #78899f;
+    --accent-ink: #9ad8f0;
+    --btn-bg: #f3f7fc;
+    --btn-fg: #080c14;
+    --rule: rgba(255, 255, 255, 0.11);
+    --rule-strong: rgba(255, 255, 255, 0.24);
 
-  --glass-fill: linear-gradient(
-    135deg,
-    rgba(255, 255, 255, 0.12) 0%,
-    rgba(170, 204, 242, 0.05) 55%,
-    rgba(255, 255, 255, 0.04) 100%
-  );
-  --glass-border: rgba(255, 255, 255, 0.18);
-  --glass-rim: rgba(255, 255, 255, 0.4);
-  --glass-shadow:
-    inset 0 1px 0 rgba(255, 255, 255, 0.28),
-    0 30px 72px rgba(0, 0, 0, 0.46);
-  --nav-fill: rgba(15, 22, 34, 0.56);
-  --caption-fill: rgba(10, 15, 24, 0.62);
-  --caption-border: rgba(255, 255, 255, 0.22);
-  --caption-ink: #f3f7fc;
-  --field-bg: rgba(255, 255, 255, 0.05);
-  --field-border: rgba(255, 255, 255, 0.16);
+    /* VisionOS Optical Glass Tokens (Dark Theme) */
+    --glass-fill: linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.12) 0%,
+      rgba(170, 204, 242, 0.05) 55%,
+      rgba(255, 255, 255, 0.04) 100%
+    );
+    --glass-border: rgba(255, 255, 255, 0.18);
+    --glass-rim: rgba(255, 255, 255, 0.4);
+    --glass-shadow:
+      inset 0 1px 0 rgba(255, 255, 255, 0.28),
+      0 30px 72px rgba(0, 0, 0, 0.46);
+    --nav-fill: rgba(15, 22, 34, 0.56);
+    --caption-fill: rgba(10, 15, 24, 0.62);
+    --caption-border: rgba(255, 255, 255, 0.22);
+    --caption-ink: #f3f7fc;
+    --field-bg: rgba(255, 255, 255, 0.05);
+    --field-border: rgba(255, 255, 255, 0.16);
 
-  --orb-sapphire: rgba(88, 160, 252, 0.28);
-  --orb-mint: rgba(104, 224, 198, 0.2);
-  --orb-pearl: rgba(176, 206, 248, 0.16);
+    --orb-sapphire: rgba(88, 160, 252, 0.28);
+    --orb-mint: rgba(104, 224, 198, 0.2);
+    --orb-pearl: rgba(176, 206, 248, 0.16);
+  }
 }
 
 *,
@@ -191,7 +193,7 @@ a {
   padding-inline: clamp(1.35rem, 4.5vw, 3.25rem);
 }
 
-/* Theme-adaptive brand lockups (Frosted Light vs Evening Glass) */
+/* Theme-adaptive brand lockups (Light vs Dark browser/OS theme) */
 .brand-light {
   display: block;
 }
@@ -200,12 +202,14 @@ a {
   display: none;
 }
 
-html[data-lighting="evening"] .brand-light {
-  display: none;
-}
+@media (prefers-color-scheme: dark) {
+  .brand-light {
+    display: none;
+  }
 
-html[data-lighting="evening"] .brand-dark {
-  display: block;
+  .brand-dark {
+    display: block;
+  }
 }
 
 /* VisionOS Optical Glass Surface: used strictly where necessary */

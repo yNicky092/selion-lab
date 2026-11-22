@@ -86,8 +86,19 @@ export default function WorkPage() {
       <div className="container">
         {/* Flagship Game Header */}
         <div className={styles.intro}>
-          <p className="eyebrow">Flagship Game · Desktop &amp; Android</p>
-          <h1 className={styles.title}>Silicon Emergence</h1>
+          <div className={styles.gameHeaderRow}>
+            <img
+              src="/brand/silicon-emergence-icon.png"
+              alt="Silicon Emergence app icon"
+              className={styles.gameIconLg}
+            />
+            <div>
+              <p className="eyebrow" style={{ marginBottom: "0.3rem" }}>
+                Flagship Game · Desktop &amp; Android
+              </p>
+              <h1 className={styles.title}>Silicon Emergence</h1>
+            </div>
+          </div>
           <p className={styles.tagline}>
             From a single transistor to a working computer, built with real silicon physics.
           </p>

@@ -151,7 +151,6 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      data-lighting="daylight"
       className={`${plusJakartaSans.variable} ${ibmPlexMono.variable}`}
     >
       <body>

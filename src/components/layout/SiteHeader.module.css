@@ -56,33 +56,6 @@
   font-weight: 500;
 }
 
-.actions {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-}
-
-.lightToggle {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  padding: 6px 13px;
-  border-radius: 999px;
-  font-family: var(--font-display), sans-serif;
-  font-size: 0.78rem;
-  font-weight: 500;
-  color: var(--ink-2);
-  background: rgba(128, 148, 178, 0.12);
-  border: 1px solid var(--rule);
-  cursor: pointer;
-  transition: all 180ms ease;
-}
-
-.lightToggle:hover {
-  color: var(--ink-1);
-  border-color: var(--rule-strong);
-}
-
 .mobileBtn {
   display: none;
   background: transparent;

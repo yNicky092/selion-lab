@@ -8,6 +8,21 @@
   margin-bottom: 2.8rem;
 }
 
+.gameHeaderRow {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.gameIconLg {
+  width: 76px;
+  height: 76px;
+  border-radius: 18px;
+  flex-shrink: 0;
+  object-fit: contain;
+  filter: drop-shadow(0 12px 24px rgba(0, 0, 0, 0.2));
+}
+
 .title {
   font-size: clamp(2.5rem, 5.2vw, 4.25rem);
   line-height: 1.04;

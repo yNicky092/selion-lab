@@ -121,6 +121,21 @@
   align-items: center;
 }
 
+.spotlightTitleRow {
+  display: flex;
+  align-items: center;
+  gap: 1.15rem;
+}
+
+.gameIcon {
+  width: 68px;
+  height: 68px;
+  border-radius: 16px;
+  flex-shrink: 0;
+  object-fit: contain;
+  filter: drop-shadow(0 10px 22px rgba(0, 0, 0, 0.18));
+}
+
 .spotlightTagline {
   margin-top: 0.85rem;
   font-family: var(--font-display), sans-serif;

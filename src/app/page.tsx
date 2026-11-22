@@ -97,8 +97,19 @@ export default function HomePage() {
           <div className={`optical-glass ${styles.spotlightGlass}`}>
             <div className={styles.spotlightGrid}>
               <div>
-                <p className="eyebrow">Flagship Game · Desktop &amp; Android</p>
-                <h2 className={styles.sectionTitle}>Silicon Emergence</h2>
+                <div className={styles.spotlightTitleRow}>
+                  <img
+                    src="/brand/silicon-emergence-icon.png"
+                    alt="Silicon Emergence app icon"
+                    className={styles.gameIcon}
+                  />
+                  <div>
+                    <p className="eyebrow" style={{ marginBottom: "0.3rem" }}>
+                      Flagship Game · Desktop &amp; Android
+                    </p>
+                    <h2 className={styles.sectionTitle}>Silicon Emergence</h2>
+                  </div>
+                </div>
                 <p className={styles.spotlightTagline}>
                   From a single transistor to a working computer, built with real silicon physics.
                 </p>
