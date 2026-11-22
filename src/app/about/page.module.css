@@ -1,0 +1,72 @@
+.page {
+  padding-top: clamp(3rem, 7vw, 5.5rem);
+  padding-bottom: clamp(4rem, 8vw, 6.5rem);
+}
+
+.intro {
+  max-width: 760px;
+  margin-bottom: 3.5rem;
+}
+
+.title {
+  font-size: clamp(2.5rem, 5.2vw, 4.25rem);
+  line-height: 1.04;
+}
+
+.lead {
+  margin-top: 1.25rem;
+  font-size: clamp(1.04rem, 1.38vw, 1.18rem);
+  line-height: 1.7;
+  color: var(--ink-2);
+}
+
+.essaySplit {
+  display: grid;
+  grid-template-columns: 5fr 7fr;
+  gap: 3.5rem;
+  padding-block: 3.5rem;
+  border-top: 1px solid var(--rule);
+}
+
+.pullQuote {
+  font-family: var(--font-display), sans-serif;
+  font-size: clamp(1.6rem, 2.6vw, 2.2rem);
+  line-height: 1.24;
+  color: var(--ink-1);
+}
+
+.essayBody {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  font-size: 1.02rem;
+  line-height: 1.75;
+  color: var(--ink-2);
+}
+
+.closingBand {
+  padding-top: 3rem;
+  border-top: 1px solid var(--rule);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+
+.closingTitle {
+  font-size: 1.65rem;
+  margin-bottom: 0.35rem;
+}
+
+.closingText {
+  font-size: 0.96rem;
+  color: var(--ink-2);
+}
+
+@media (max-width: 860px) {
+  .essaySplit {
+    grid-template-columns: 1fr;
+    gap: 1.75rem;
+  }
+}

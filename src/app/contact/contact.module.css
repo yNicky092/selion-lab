@@ -1,0 +1,201 @@
+.page {
+  display: flex;
+  flex-direction: column;
+}
+
+.hero {
+  padding-top: clamp(4rem, 8vw, 6.5rem);
+  padding-bottom: clamp(5rem, 9vw, 8rem);
+}
+
+.splitGrid {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: clamp(3rem, 6vw, 6rem);
+  padding-top: 2.5rem;
+  border-top: 1px solid var(--line-faint);
+  align-items: start;
+}
+
+.leftCol {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.emailBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+}
+
+.emailLabel {
+  font-size: 0.82rem;
+  color: var(--ink-muted);
+}
+
+.bigEmail {
+  align-self: flex-start;
+  font-family: var(--font-display);
+  font-size: clamp(1.5rem, 2.8vw, 2.2rem);
+  letter-spacing: -0.025em;
+  color: var(--ink-primary);
+  border-bottom: 1.5px solid var(--amber);
+  padding-bottom: 4px;
+  transition: color var(--duration-fast) var(--ease-out);
+}
+
+.bigEmail:hover {
+  color: var(--amber);
+}
+
+.channelList {
+  border-top: 1px solid var(--line-faint);
+}
+
+.channelRow {
+  padding-block: 1.25rem;
+  border-bottom: 1px solid var(--line-faint);
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.channelRow h2 {
+  font-size: 1.05rem;
+}
+
+.channelRow p {
+  font-size: 0.9rem;
+  line-height: 1.58;
+  color: var(--ink-secondary);
+}
+
+.channelRow a {
+  align-self: flex-start;
+  margin-top: 0.2rem;
+  font-size: 0.84rem;
+  color: var(--amber);
+}
+
+.channelRow a:hover {
+  color: var(--amber-hover);
+}
+
+/* Composer */
+.composer {
+  padding: clamp(1.5rem, 3.2vw, 2.25rem);
+  background: var(--glass-bg);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border: 1px solid var(--glass-border);
+  border-top-color: var(--glass-border-top);
+  box-shadow: var(--glass-shadow);
+  border-radius: var(--radius-glass);
+}
+
+.composerTitle {
+  font-size: 1.55rem;
+  margin-bottom: 0.5rem;
+}
+
+.composerLead {
+  font-size: 0.95rem;
+  color: var(--ink-secondary);
+  margin-bottom: 2rem;
+}
+
+.composerLead code {
+  color: var(--amber);
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.twoCol {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.5rem;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.field label {
+  font-size: 0.8rem;
+  color: var(--ink-muted);
+}
+
+.field input,
+.field select,
+.field textarea {
+  width: 100%;
+  padding: 0.72rem 0;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid var(--line-default);
+  color: var(--ink-primary);
+  font-size: 0.96rem;
+}
+
+.field select {
+  background-color: var(--bg-canvas);
+  cursor: pointer;
+}
+
+.field input:focus,
+.field select:focus,
+.field textarea:focus {
+  outline: none;
+  border-bottom-color: var(--amber);
+}
+
+.errorText {
+  font-size: 0.78rem;
+  color: var(--danger);
+}
+
+.submitRow {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+.destNote {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--ink-muted);
+}
+
+.passLabel {
+  font-size: 0.84rem;
+  color: var(--emerald);
+  margin-bottom: 0.5rem;
+}
+
+.successActions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.85rem;
+}
+
+@media (max-width: 960px) {
+  .splitGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 580px) {
+  .twoCol {
+    grid-template-columns: 1fr;
+  }
+}

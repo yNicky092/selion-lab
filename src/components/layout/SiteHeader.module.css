@@ -1,0 +1,115 @@
+.shell {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  padding: 16px 0;
+}
+
+.capsule {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 10px 18px;
+  background: var(--nav-fill);
+  backdrop-filter: blur(32px) saturate(185%);
+  -webkit-backdrop-filter: blur(32px) saturate(185%);
+  border: 1px solid var(--glass-border);
+  border-top-color: var(--glass-rim);
+  box-shadow: var(--glass-shadow);
+  border-radius: 999px;
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  color: var(--ink-1);
+}
+
+.brandName {
+  font-family: var(--font-display), sans-serif;
+  font-size: 1.06rem;
+  font-weight: 500;
+  letter-spacing: -0.025em;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.navLink {
+  font-size: 0.9rem;
+  color: var(--ink-2);
+  padding: 6px 14px;
+  border-radius: 999px;
+  transition: color 180ms ease, background 180ms ease;
+}
+
+.navLink:hover {
+  color: var(--ink-1);
+}
+
+.navLinkActive {
+  color: var(--ink-1);
+  background: rgba(128, 148, 178, 0.16);
+  font-weight: 500;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.lightToggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 13px;
+  border-radius: 999px;
+  font-family: var(--font-display), sans-serif;
+  font-size: 0.78rem;
+  font-weight: 500;
+  color: var(--ink-2);
+  background: rgba(128, 148, 178, 0.12);
+  border: 1px solid var(--rule);
+  cursor: pointer;
+  transition: all 180ms ease;
+}
+
+.lightToggle:hover {
+  color: var(--ink-1);
+  border-color: var(--rule-strong);
+}
+
+.mobileBtn {
+  display: none;
+  background: transparent;
+  border: 0;
+  color: var(--ink-1);
+  font-family: var(--font-display), sans-serif;
+  font-size: 0.88rem;
+  font-weight: 500;
+  padding: 6px 10px;
+  cursor: pointer;
+}
+
+.mobileDrawer {
+  margin-top: 10px;
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+@media (max-width: 820px) {
+  .nav {
+    display: none;
+  }
+  .mobileBtn {
+    display: inline-flex;
+  }
+}

@@ -1,36 +1,34 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Selion Lab
 
-## Getting Started
+Official website for **Selion Lab**, an independent game studio building interactive worlds on real silicon physics.
 
-First, run the development server:
+## Pages
+- **Home (`/`)**: Studio welcome, philosophy, Silicon Emergence spotlight, simulated architecture overview, and Virtual Fab.
+- **Silicon Emergence & Vision (`/work`)**: Core gameplay loop, 72-level / 6-chapter + Infinite Sandbox campaign explorer, physics & platform breakdown, SERMM-16, SEVM & FLUX, EmergenceOS-16 (`EOS-16.serm`), and Virtual Fab.
+- **About (`/about`)**: Studio mission and ethos.
+- **Contact (`/contact`)**: Direct studio inquiry form (`contact@selionlab.com`).
+
+## Local Development
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Production Build & Hosting
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+This site is configured with Next.js static export (`output: "export"` in `next.config.ts`), producing a pure static bundle in `out/` that deploys directly to any modern host:
 
-## Learn More
+```bash
+npm run build
+```
 
-To learn more about Next.js, take a look at the following resources:
+- **Vercel**: Import this repository on Vercel and deploy with default Next.js settings.
+- **Cloudflare Pages / Netlify**: Set build command to `npm run build` and publish directory to `out`.
+- **GitHub Pages**: Enable GitHub Pages under **Settings -> Pages -> Source: GitHub Actions** to deploy automatically on every push to `main`.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Contact
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+[contact@selionlab.com](mailto:contact@selionlab.com)
