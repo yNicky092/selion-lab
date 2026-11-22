@@ -9,9 +9,26 @@
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-  gap: 1rem;
+  gap: 1.25rem;
   font-size: 0.88rem;
   color: var(--ink-3);
+}
+
+.brandGroup {
+  display: inline-flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.brandLink {
+  display: inline-flex;
+  align-items: center;
+}
+
+.footerLockup {
+  height: 22px;
+  width: auto;
+  object-fit: contain;
 }
 
 .links {

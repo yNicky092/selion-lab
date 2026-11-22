@@ -23,15 +23,13 @@
 .brand {
   display: inline-flex;
   align-items: center;
-  gap: 0.65rem;
   color: var(--ink-1);
 }
 
-.brandName {
-  font-family: var(--font-display), sans-serif;
-  font-size: 1.06rem;
-  font-weight: 500;
-  letter-spacing: -0.025em;
+.brandLockup {
+  height: 28px;
+  width: auto;
+  object-fit: contain;
 }
 
 .nav {

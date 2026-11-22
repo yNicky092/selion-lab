@@ -26,6 +26,21 @@ export const metadata: Metadata = {
   },
   description:
     "Welcome to Selion Lab. We build interactive worlds where real silicon physics, transistors, and simulated computer architectures are the medium you play with.",
+  icons: {
+    icon: [
+      {
+        url: "/brand/favicon-light.png",
+        media: "(prefers-color-scheme: light)",
+        type: "image/png",
+      },
+      {
+        url: "/brand/favicon-dark.png",
+        media: "(prefers-color-scheme: dark)",
+        type: "image/png",
+      },
+    ],
+    apple: "/brand/apple-touch-icon.png",
+  },
   openGraph: {
     title: "Selion Lab",
     description:

@@ -29,22 +29,17 @@ export function SiteHeader() {
     <header className={styles.shell}>
       <div className="container">
         <div className={styles.capsule}>
-          <Link href="/" className={styles.brand} onClick={() => setMenuOpen(false)}>
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-              <rect x="3" y="3" width="18" height="18" rx="4.5" stroke="currentColor" strokeWidth="1.5" />
-              <rect
-                x="8.2"
-                y="8.2"
-                width="7.6"
-                height="7.6"
-                rx="1.8"
-                fill="currentColor"
-                fillOpacity="0.16"
-                stroke="currentColor"
-                strokeWidth="1.2"
-              />
-            </svg>
-            <span className={styles.brandName}>Selion Lab</span>
+          <Link href="/" className={styles.brand} onClick={() => setMenuOpen(false)} aria-label="Selion Lab Home">
+            <img
+              src="/brand/horizontal-lockup-light.png"
+              alt="Selion Lab"
+              className={`brand-light ${styles.brandLockup}`}
+            />
+            <img
+              src="/brand/horizontal-lockup-dark.png"
+              alt="Selion Lab"
+              className={`brand-dark ${styles.brandLockup}`}
+            />
           </Link>
 
           <nav className={styles.nav} aria-label="Primary navigation">

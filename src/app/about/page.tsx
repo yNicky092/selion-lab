@@ -6,12 +6,27 @@ export default function AboutPage() {
   return (
     <div className={styles.page}>
       <div className="container">
-        <div className={styles.intro}>
-          <p className="eyebrow">About Selion Lab</p>
-          <h1 className={styles.title}>Small studio. Deep curiosity.</h1>
-          <p className={styles.lead}>
-            We started Selion Lab because we wanted to play hardware games that respected how silicon actually behaves, without needing a PhD to sit down and enjoy them.
-          </p>
+        <div className={styles.heroGrid}>
+          <div className={styles.intro}>
+            <p className="eyebrow">About Selion Lab</p>
+            <h1 className={styles.title}>Small studio. Deep curiosity.</h1>
+            <p className={styles.lead}>
+              We started Selion Lab because we wanted to play hardware games that respected how silicon actually behaves, without needing a PhD to sit down and enjoy them.
+            </p>
+          </div>
+
+          <div className={styles.crestWrap}>
+            <img
+              src="/brand/logo-light.png"
+              alt="Selion Lab Studio Emblem"
+              className={`brand-light ${styles.crest}`}
+            />
+            <img
+              src="/brand/logo-dark.png"
+              alt="Selion Lab Studio Emblem"
+              className={`brand-dark ${styles.crest}`}
+            />
+          </div>
         </div>
 
         <div className={styles.essaySplit}>

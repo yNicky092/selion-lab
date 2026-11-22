@@ -3,9 +3,28 @@
   padding-bottom: clamp(4rem, 8vw, 6.5rem);
 }
 
-.intro {
-  max-width: 760px;
+.heroGrid {
+  display: grid;
+  grid-template-columns: 7fr 5fr;
+  gap: 3rem;
+  align-items: center;
   margin-bottom: 3.5rem;
+}
+
+.intro {
+  max-width: 720px;
+}
+
+.crestWrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.crest {
+  width: min(260px, 70%);
+  height: auto;
+  object-fit: contain;
 }
 
 .title {
@@ -65,6 +84,7 @@
 }
 
 @media (max-width: 860px) {
+  .heroGrid,
   .essaySplit {
     grid-template-columns: 1fr;
     gap: 1.75rem;

@@ -191,6 +191,23 @@ a {
   padding-inline: clamp(1.35rem, 4.5vw, 3.25rem);
 }
 
+/* Theme-adaptive brand lockups (Frosted Light vs Evening Glass) */
+.brand-light {
+  display: block;
+}
+
+.brand-dark {
+  display: none;
+}
+
+html[data-lighting="evening"] .brand-light {
+  display: none;
+}
+
+html[data-lighting="evening"] .brand-dark {
+  display: block;
+}
+
 /* VisionOS Optical Glass Surface: used strictly where necessary */
 .optical-glass {
   position: relative;
