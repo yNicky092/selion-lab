@@ -1,0 +1,41 @@
+# Selion Lab
+
+> Independent game studio building interactive worlds on real silicon physics and simulated computer architectures.
+
+- **Website**: https://selionlab.com
+- **Contact**: contact@selionlab.com
+- **GitHub**: https://github.com/yNicky092/selion-lab
+
+## Overview
+
+Selion Lab is an independent game studio focused on making real computer architecture and semiconductor physics playful and tactile. Every architecture created by Selion Lab runs in C++20 software simulation designed specifically for interactive play rather than physical consumer silicon.
+
+## Flagship Game: Silicon Emergence
+
+- **URL**: https://selionlab.com/work/
+- **Tagline**: From a single transistor to a working computer, built with real silicon physics.
+- **Platforms**: Desktop and Android.
+- **Description**: A 3D VLSI hardware-engineering sandbox and campaign game (72 levels across 6 chapters plus Infinite Sandbox) where every logic gate, memory cell, CPU, GPU, TPU, and NPU emerges purely from physical NMOS and PMOS transistors with no logic-gate shortcuts.
+- **Core Features**:
+  - 3D FinFET place-and-route with multi-layer Manhattan copper traces
+  - 8-state switch-level electrical resolution, Elmore RC delays, capacitive charge sharing, and DRAM decay
+  - Built-in 4-channel oscilloscope, critical-path Timing Analyzer, and 3-axis PPA Scorecard (Power, Performance, Area)
+  - Glass-Box ICs with X-Ray visibility where nested transistors stay electrically live on a native C++20 speculative wavefront engine
+
+## Simulated Computer Architectures
+
+- **SERMM-16** (Selion Emergent RISC Micro-Machines): An original 16-bit RISC CPU architecture simulated in C++20 over 64 KB unified byte-addressed memory, with 8 ABI-aliased registers, a 4-bit FLAGS register, 4 uniform 16-bit instruction formats, and both host and 127-word self-hosted `serasm` assemblers.
+- **SEVM & FLUX** (Selion Emergent Vector Machines): A simulated 4-lane lockstep SIMT vector GPU sharing unified 64 KB memory with SERMM-16, supporting divergence masking, warp barriers, 256-word `SMEM16` scratchpad, cross-lane shuffles, fused multiply-add, and `.flux_kernel` dispatch.
+- **EmergenceOS-16 (`EOS-16.serm`)**: A simulated bare-metal 16-bit OS disk image format (`.serm`, not `.iso`) with pure assembly drivers, interactive shell, and embedded SEFS filesystem running strictly inside the SERMM-16 simulation.
+
+## Virtual Fab
+
+- **URL**: https://selionlab.com/work/#virtual-fab
+- **Description**: A playable silicon manufacturing simulator exploring the journey from Verilog netlists through simulated photolithography, etching, doping, metallization, and packaging into real-time simulation.
+
+## Key Pages
+
+- [Home](https://selionlab.com/): Studio welcome, philosophy, and flagship overview.
+- [Silicon Emergence & Simulated Architecture](https://selionlab.com/work/): Full game breakdown, 6-chapter campaign explorer, SERMM-16, SEVM & FLUX, EmergenceOS-16, and Virtual Fab.
+- [About](https://selionlab.com/about/): Studio story and ethos.
+- [Contact](https://selionlab.com/contact/): Direct studio contact (`contact@selionlab.com`).
