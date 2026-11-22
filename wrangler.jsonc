@@ -4,5 +4,15 @@
   "assets": {
     "directory": "./out",
     "not_found_handling": "404-page"
-  }
+  },
+  "routes": [
+    {
+      "pattern": "selionlab.com",
+      "custom_domain": true
+    },
+    {
+      "pattern": "www.selionlab.com",
+      "custom_domain": true
+    }
+  ]
 }
