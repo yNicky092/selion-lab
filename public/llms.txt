@@ -8,14 +8,14 @@
 
 ## Overview
 
-Selion Lab is an independent game studio focused on making real computer architecture and semiconductor physics playful and tactile. Every architecture created by Selion Lab runs in a custom software simulation engine designed specifically for interactive play rather than physical consumer silicon.
+Selion Lab is an independent game studio focused on making real computer architecture and semiconductor physics playful and tactile. Every architecture created by Selion Lab runs in a custom software simulation engine crafted for interactive play and engineered with real computer-science rules from the ground up.
 
 ## Flagship Game: Silicon Emergence
 
 - **URL**: https://selionlab.com/work/
 - **Tagline**: From a single transistor to a working computer, built with real silicon physics.
 - **Platforms**: Desktop and Android.
-- **Description**: A 3D VLSI hardware-engineering sandbox and campaign game (72 levels across 6 chapters plus Infinite Sandbox) where every logic gate, memory cell, CPU, GPU, TPU, and NPU emerges purely from physical NMOS and PMOS transistors with no logic-gate shortcuts.
+- **Description**: A 3D VLSI hardware-engineering sandbox and campaign game (72 levels across 6 chapters plus Infinite Sandbox) where every logic gate, memory cell, CPU, GPU, TPU, and NPU emerges purely from physical NMOS and PMOS transistors.
 - **Core Features**:
   - 3D FinFET place-and-route with multi-layer Manhattan copper traces
   - 8-state switch-level electrical resolution, Elmore RC delays, capacitive charge sharing, and DRAM decay
@@ -26,7 +26,7 @@ Selion Lab is an independent game studio focused on making real computer archite
 
 - **SERMM-16** (Selion Emergent RISC Micro-Machines): An original 16-bit RISC CPU architecture simulated in real time over 64 KB unified byte-addressed memory, with 8 ABI-aliased registers, a 4-bit FLAGS register, 4 uniform 16-bit instruction formats, and both host and 127-word self-hosted `serasm` assemblers.
 - **SEVM & FLUX** (Selion Emergent Vector Machines): A simulated 4-lane lockstep SIMT vector GPU sharing unified 64 KB memory with SERMM-16, supporting divergence masking, warp barriers, 256-word `SMEM16` scratchpad, cross-lane shuffles, fused multiply-add, and `.flux_kernel` dispatch.
-- **EmergenceOS-16 (`EOS-16.serm`)**: A simulated bare-metal 16-bit OS disk image format (`.serm`, not `.iso`) with pure assembly drivers, interactive shell, and embedded SEFS filesystem running strictly inside the SERMM-16 simulation.
+- **EmergenceOS-16 (`EOS-16.serm`)**: A simulated bare-metal 16-bit OS stored in our custom `.serm` disk image format, complete with pure assembly drivers, interactive shell, and embedded SEFS filesystem running natively inside the SERMM-16 simulation.
 
 ## Virtual Fab
 

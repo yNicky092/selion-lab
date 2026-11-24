@@ -56,7 +56,7 @@ export default function ContactPage() {
                 contact@selionlab.com
               </a>
               <p className={styles.directNote}>
-                No automated support queues. Every note reaches us directly.
+                Every note lands straight in our studio inbox and is read directly by our team.
               </p>
             </div>
           </div>

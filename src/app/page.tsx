@@ -19,7 +19,7 @@ export default function HomePage() {
               We turn real silicon physics into places you can play.
             </h1>
             <p className={styles.heroLead}>
-              Hello, we are Selion Lab, an independent game studio fascinated by how computers actually work underneath the hood. We build interactive worlds where transistors, processors, and fabrication are not just background lore, they are the medium you play with.
+              Hello, we are Selion Lab, an independent game studio fascinated by how computers actually work underneath the hood. We build interactive worlds where transistors, processors, and fabrication are the living medium you play with.
             </p>
             <div className={styles.heroActions}>
               <Link href="/work" className="btn-primary">
@@ -55,10 +55,10 @@ export default function HomePage() {
           <div className={styles.sectionHeader}>
             <p className="eyebrow">Our Philosophy</p>
             <h2 className={styles.sectionTitle}>
-              Curiosity is better when nothing is faked.
+              Curiosity thrives when every circuit is real.
             </h2>
             <p className={styles.sectionLead}>
-              Most hardware games simplify computing into abstract puzzles that only look like electronics from a distance. Our vision is simpler and more exciting: simulate the real behavior in software, strip away the intimidation, and let you discover how a single switch grows into a working machine.
+              Our vision is grounded in real silicon behavior: simulate authentic physics in software, make it tactile and approachable, and let you discover how a single switch grows into a working machine.
             </p>
           </div>
 
@@ -148,7 +148,7 @@ export default function HomePage() {
               Original simulated machines, and the fab that makes them.
             </h2>
             <p className={styles.sectionLead}>
-              None of these are physical consumer chips. They are original software architectures we design and simulate in real time to make our game worlds deeper and more believable.
+              Each of these is an original software architecture we design and simulate in real time to make our game worlds deeper and more believable.
             </p>
           </div>
 

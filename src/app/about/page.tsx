@@ -27,7 +27,7 @@ export default function AboutPage() {
             <p className="eyebrow">About Selion Lab</p>
             <h1 className={styles.title}>Small studio. Deep curiosity.</h1>
             <p className={styles.lead}>
-              We started Selion Lab because we wanted to play hardware games that respected how silicon actually behaves, without needing a PhD to sit down and enjoy them.
+              We started Selion Lab to create hardware games that honor how silicon actually behaves, designed to be welcoming and immediately playable for anyone curious about computing.
             </p>
           </div>
 
@@ -54,7 +54,7 @@ export default function AboutPage() {
               Selion Lab is an independent studio working at the crossroads of systems programming, visual craft, and interactive play. Our focus is on <strong>Silicon Emergence</strong>, our simulated architectures (<strong>SERMM-16</strong>, <strong>SEVM &amp; FLUX</strong>, and <strong>EmergenceOS-16</strong>), and <strong>Virtual Fab</strong>.
             </p>
             <p>
-              We’re straightforward about what we build: our architectures are software simulations crafted for interactive play rather than physical consumer silicon, engineered with real computer-science rules from the ground up.
+              Every architecture we build is a live software simulation crafted for interactive play and engineered with real computer-science rules from the ground up.
             </p>
           </div>
         </div>

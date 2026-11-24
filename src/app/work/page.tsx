@@ -69,7 +69,7 @@ const CHAPTERS = [
   {
     label: "Unlocked Sandbox",
     title: "Infinite Sandbox",
-    desc: "Once you master core microarchitecture, the walls come off for unrestricted custom silicon.",
+    desc: "Once you master core microarchitecture, open the full canvas to build custom silicon at any scale.",
     items: [
       "Full 3D FinFET workbench & Glass-Box IC minting",
       "4-channel oscilloscope & critical-path Timing Analyzer",
@@ -104,7 +104,7 @@ export default function WorkPage() {
             From a single transistor to a working computer, built with real silicon physics.
           </p>
           <p className={styles.lead}>
-            A 3D VLSI hardware-engineering sandbox and campaign game where every logic gate, memory cell, CPU, GPU, TPU, and NPU emerges purely from physical NMOS and PMOS transistors, with no fake logic-gate shortcuts.
+            A 3D VLSI hardware-engineering sandbox and campaign game where every logic gate, memory cell, CPU, GPU, TPU, and NPU emerges purely from physical NMOS and PMOS transistors.
           </p>
         </div>
 
@@ -212,7 +212,7 @@ export default function WorkPage() {
           <div>
             <p className="eyebrow">Under the Hood</p>
             <h2 className={styles.sectionTitle}>
-              True switch-level physics, zero shortcuts.
+              True switch-level physics, all the way down.
             </h2>
             <div className={styles.splitBody}>
               <p>
@@ -222,7 +222,7 @@ export default function WorkPage() {
                 <strong>Live Engineering Instruments:</strong> Built-in 4-channel piecewise-linear oscilloscope, interactive critical-path Timing Analyzer, and real-time die activity visualization.
               </p>
               <p>
-                <strong>Zero-Shortcut Hierarchy:</strong> Encapsulated Glass-Box ICs never collapse into lookup tables. Every transistor inside every nested chip stays electrically live on our speculative wavefront simulation engine.
+                <strong>Live Transistor Hierarchy:</strong> Encapsulated Glass-Box ICs preserve every underlying switch intact. Every transistor inside every nested chip stays electrically live on our speculative wavefront simulation engine.
               </p>
             </div>
           </div>
