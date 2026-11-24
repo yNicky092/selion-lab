@@ -9,6 +9,12 @@
   gap: 3rem;
   align-items: center;
   margin-bottom: 3.5rem;
+  max-width: 100%;
+}
+
+.heroGrid > * {
+  min-width: 0;
+  max-width: 100%;
 }
 
 .intro {
@@ -28,8 +34,10 @@
 }
 
 .title {
-  font-size: clamp(2.5rem, 5.2vw, 4.25rem);
+  font-size: clamp(1.95rem, 7vw, 4.25rem);
   line-height: 1.04;
+  overflow-wrap: break-word;
+  word-break: normal;
 }
 
 .lead {
@@ -45,13 +53,21 @@
   gap: 3.5rem;
   padding-block: 3.5rem;
   border-top: 1px solid var(--rule);
+  max-width: 100%;
+}
+
+.essaySplit > * {
+  min-width: 0;
+  max-width: 100%;
 }
 
 .pullQuote {
   font-family: var(--font-display), sans-serif;
-  font-size: clamp(1.6rem, 2.6vw, 2.2rem);
+  font-size: clamp(1.5rem, 4.8vw, 2.2rem);
   line-height: 1.24;
   color: var(--ink-1);
+  overflow-wrap: break-word;
+  word-break: normal;
 }
 
 .essayBody {
@@ -71,6 +87,11 @@
   align-items: center;
   justify-content: space-between;
   gap: 1.5rem;
+}
+
+.closingBand > * {
+  min-width: 0;
+  max-width: 100%;
 }
 
 .closingTitle {

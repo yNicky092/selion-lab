@@ -14,8 +14,14 @@
   color: var(--ink-3);
 }
 
+.inner > * {
+  min-width: 0;
+  max-width: 100%;
+}
+
 .brandGroup {
   display: inline-flex;
+  flex-wrap: wrap;
   align-items: center;
   gap: 1rem;
 }

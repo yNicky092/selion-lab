@@ -106,7 +106,7 @@ export default function HomePage() {
                     <p className="eyebrow" style={{ marginBottom: "0.3rem" }}>
                       Flagship Game · Desktop &amp; Android
                     </p>
-                    <h2 className={styles.sectionTitle}>Silicon Emergence</h2>
+                    <h2 className={styles.spotlightTitle}>Silicon Emergence</h2>
                   </div>
                 </div>
                 <p className={styles.spotlightTagline}>

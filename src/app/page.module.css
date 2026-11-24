@@ -95,12 +95,21 @@
   gap: 2.5rem;
   padding-top: 2rem;
   border-top: 1px solid var(--rule);
+  max-width: 100%;
+}
+
+.openGrid3 > * {
+  min-width: 0;
+  max-width: 100%;
 }
 
 .pillarIdx {
   font-size: 0.78rem;
   color: var(--accent-ink);
   margin-bottom: 0.65rem;
+  overflow-wrap: break-word;
+  word-break: normal;
+  max-width: 100%;
 }
 
 .pillarTitle {
@@ -116,7 +125,9 @@
 
 /* Intentional VisionOS Optical Glass Spotlight for Silicon Emergence */
 .spotlightGlass {
-  padding: clamp(1.75rem, 4.5vw, 3.4rem);
+  box-sizing: border-box;
+  max-width: 100%;
+  padding: clamp(1.5rem, 4.5vw, 3.4rem);
   transition: border-color 150ms ease, transform 150ms ease;
 }
 
@@ -129,12 +140,32 @@
   grid-template-columns: 1fr 1fr;
   gap: 2.75rem;
   align-items: center;
+  max-width: 100%;
+}
+
+.spotlightGrid > * {
+  min-width: 0;
+  max-width: 100%;
 }
 
 .spotlightTitleRow {
   display: flex;
   align-items: center;
   gap: 1.15rem;
+  min-width: 0;
+  max-width: 100%;
+}
+
+.spotlightTitleRow > * {
+  min-width: 0;
+  max-width: 100%;
+}
+
+.spotlightTitle {
+  font-size: clamp(1.45rem, 6vw, 2.25rem);
+  line-height: 1.08;
+  overflow-wrap: break-word;
+  word-break: normal;
 }
 
 .gameIcon {
@@ -152,6 +183,9 @@
   font-size: 1.14rem;
   font-weight: 500;
   color: var(--ink-1);
+  max-width: 100%;
+  overflow-wrap: break-word;
+  word-break: normal;
 }
 
 .spotlightCopy {
@@ -159,6 +193,9 @@
   font-size: 0.98rem;
   line-height: 1.68;
   color: var(--ink-2);
+  max-width: 100%;
+  overflow-wrap: break-word;
+  word-break: normal;
 }
 
 .spotlightCta {
@@ -166,7 +203,14 @@
 }
 
 .archRow {
+  box-sizing: border-box;
+  max-width: 100%;
   transition: border-color 150ms ease;
+}
+
+.archRow > * {
+  min-width: 0;
+  max-width: 100%;
 }
 
 .archRow:hover {
@@ -174,19 +218,28 @@
 }
 
 .rowTitle {
-  font-size: clamp(1.55rem, 2.4vw, 2rem);
+  font-size: clamp(1.45rem, 6vw, 2.25rem);
+  line-height: 1.1;
+  overflow-wrap: break-word;
+  word-break: normal;
 }
 
 .rowMeta {
   margin-top: 0.35rem;
   font-size: 0.86rem;
   color: var(--ink-3);
+  overflow-wrap: break-word;
+  word-break: normal;
+  max-width: 100%;
 }
 
 .rowSpecs {
   margin-top: 0.55rem;
   font-size: 0.78rem;
   color: var(--ink-3);
+  overflow-wrap: break-word;
+  word-break: normal;
+  max-width: 100%;
 }
 
 .rowCopy {
@@ -194,6 +247,9 @@
   line-height: 1.7;
   color: var(--ink-2);
   margin-bottom: 1rem;
+  max-width: 100%;
+  overflow-wrap: break-word;
+  word-break: normal;
 }
 
 .closingBand {
@@ -207,6 +263,7 @@
 }
 
 .closingCopy {
+  min-width: 0;
   max-width: 560px;
 }
 
@@ -235,5 +292,24 @@
   .openGrid3,
   .spotlightGrid {
     grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .spotlightGlass {
+    padding-inline: 1.25rem;
+  }
+}
+
+@media (max-width: 419px) {
+  .spotlightTitleRow {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+
+  .gameIcon {
+    width: 56px;
+    height: 56px;
   }
 }

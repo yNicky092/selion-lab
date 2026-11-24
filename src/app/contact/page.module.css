@@ -8,11 +8,19 @@
   grid-template-columns: 5fr 7fr;
   gap: 3.5rem;
   align-items: start;
+  max-width: 100%;
+}
+
+.layout > * {
+  min-width: 0;
+  max-width: 100%;
 }
 
 .title {
-  font-size: clamp(2.35rem, 4.4vw, 3.4rem);
+  font-size: clamp(1.9rem, 6.5vw, 3.4rem);
   line-height: 1.06;
+  overflow-wrap: break-word;
+  word-break: normal;
 }
 
 .lead {
@@ -37,11 +45,13 @@
 .directEmail {
   display: inline-block;
   font-family: var(--font-body), system-ui, sans-serif;
-  font-size: 1.55rem;
+  font-size: clamp(1.15rem, 4.8vw, 1.55rem);
   font-weight: 500;
   color: var(--ink-1);
   text-decoration: underline;
   text-underline-offset: 6px;
+  max-width: 100%;
+  overflow-wrap: anywhere;
   transition: color 150ms ease;
 }
 
@@ -57,11 +67,13 @@
 
 /* Intentional VisionOS Optical Glass Form Card */
 .formGlass {
-  padding: clamp(1.85rem, 4vw, 2.85rem);
+  box-sizing: border-box;
+  max-width: 100%;
+  padding: clamp(1.5rem, 4vw, 2.85rem);
 }
 
 .formTitle {
-  font-size: 1.6rem;
+  font-size: clamp(1.45rem, 5.5vw, 1.6rem);
   margin-bottom: 1.5rem;
 }
 
@@ -69,12 +81,20 @@
   display: flex;
   flex-direction: column;
   gap: 1.25rem;
+  min-width: 0;
+  max-width: 100%;
 }
 
 .row2 {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 1.25rem;
+  max-width: 100%;
+}
+
+.row2 > * {
+  min-width: 0;
+  max-width: 100%;
 }
 
 .label {
@@ -124,5 +144,11 @@
   .layout,
   .row2 {
     grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .formGlass {
+    padding-inline: 1.25rem;
   }
 }
