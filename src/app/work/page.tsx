@@ -73,7 +73,7 @@ const CHAPTERS = [
     items: [
       "Full 3D FinFET workbench & Glass-Box IC minting",
       "4-channel oscilloscope & critical-path Timing Analyzer",
-      "Native C++20 engine built for thousands of live MOSFETs",
+      "Custom simulation engine built for thousands of live MOSFETs",
     ],
   },
 ];
@@ -119,7 +119,7 @@ export default function WorkPage() {
           />
           <div className="media-caption">
             <span>Glass-Box IC · Every nested transistor stays electrically live</span>
-            <span className="mono">Native C++20 Speculative Wavefront Engine</span>
+            <span className="mono">Speculative Wavefront Simulation Engine</span>
           </div>
         </div>
 
@@ -222,7 +222,7 @@ export default function WorkPage() {
                 <strong>Live Engineering Instruments:</strong> Built-in 4-channel piecewise-linear oscilloscope, interactive critical-path Timing Analyzer, and real-time die activity visualization.
               </p>
               <p>
-                <strong>Zero-Shortcut Hierarchy:</strong> Encapsulated Glass-Box ICs never collapse into lookup tables. Every transistor inside every nested chip stays electrically live on our C++20 speculative wavefront engine.
+                <strong>Zero-Shortcut Hierarchy:</strong> Encapsulated Glass-Box ICs never collapse into lookup tables. Every transistor inside every nested chip stays electrically live on our speculative wavefront simulation engine.
               </p>
             </div>
           </div>

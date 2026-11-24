@@ -75,7 +75,7 @@ export default function HomePage() {
               <p className={`mono ${styles.pillarIdx}`}>02 · Honest Simulation</p>
               <h3 className={styles.pillarTitle}>Real rules in software</h3>
               <p className={styles.pillarBody}>
-                Every architecture we design, from individual FinFET channels to our simulated 16-bit RISC machine, runs in fast C++20 software simulation built specifically for play.
+                Every architecture we design, from individual FinFET channels to our simulated 16-bit RISC machine, runs in a custom software simulation engine built specifically for play.
               </p>
             </div>
 
@@ -148,7 +148,7 @@ export default function HomePage() {
               Original simulated machines, and the fab that makes them.
             </h2>
             <p className={styles.sectionLead}>
-              None of these are physical consumer chips. They are original software architectures we design and simulate in <span className="mono">C++20</span> to make our game worlds deeper and more believable.
+              None of these are physical consumer chips. They are original software architectures we design and simulate in real time to make our game worlds deeper and more believable.
             </p>
           </div>
 
