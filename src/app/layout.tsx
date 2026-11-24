@@ -1,4 +1,5 @@
 import type { Metadata, Viewport } from "next";
+import Script from "next/script";
 import { Plus_Jakarta_Sans, IBM_Plex_Mono } from "next/font/google";
 import { SiteHeader } from "@/components/layout/SiteHeader";
 import { SiteFooter } from "@/components/layout/SiteFooter";
@@ -188,21 +189,16 @@ export default function RootLayout({
       lang="en"
       className={`${plusJakartaSans.variable} ${ibmPlexMono.variable}`}
     >
-      <head>
-        <script
-          async
-          src="https://www.googletagmanager.com/gtm.js?id=GTM-TLHH2RW6"
-        />
-        <script
-          id="google-tag-gtm"
-          dangerouslySetInnerHTML={{
-            __html: `window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date());`,
-          }}
-        />
-      </head>
       <body>
+        <Script
+          src="https://www.googletagmanager.com/gtm.js?id=GTM-TLHH2RW6"
+          strategy="beforeInteractive"
+        />
+        <Script id="google-tag-gtm" strategy="beforeInteractive">
+          {`window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());`}
+        </Script>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
