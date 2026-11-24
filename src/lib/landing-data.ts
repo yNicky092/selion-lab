@@ -17,8 +17,9 @@ export interface ArchitectureModule {
 }
 
 export const DESKTOP_NAV_ITEMS: readonly NavLinkItem[] = [
-  { href: "/work", label: "Silicon Emergence & Vision" },
-  { href: "/work#virtual-fab", label: "Virtual Fab" },
+  { href: "/work", label: "Silicon Emergence" },
+  { href: "/vision", label: "Vision" },
+  { href: "/vision#virtual-fab", label: "Virtual Fab" },
   { href: "/about", label: "About" },
 ];
 
@@ -29,8 +30,9 @@ export const MOBILE_NAV_ITEMS: readonly NavLinkItem[] = [
 ];
 
 export const FOOTER_NAV_ITEMS: readonly NavLinkItem[] = [
-  { href: "/work", label: "Silicon Emergence & Vision" },
-  { href: "/work#virtual-fab", label: "Virtual Fab" },
+  { href: "/work", label: "Silicon Emergence" },
+  { href: "/vision", label: "Vision" },
+  { href: "/vision#virtual-fab", label: "Virtual Fab" },
   { href: "/about", label: "About" },
   { href: "/contact", label: "Contact" },
 ];

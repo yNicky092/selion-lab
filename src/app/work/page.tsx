@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import styles from "./page.module.css";
 
 const CHAPTERS = [
@@ -118,7 +119,7 @@ export default function WorkPage() {
           />
           <div className="media-caption">
             <span>Glass-Box IC · Every nested transistor stays electrically live</span>
-            <span>Native C++20 Speculative Wavefront Engine</span>
+            <span className="mono">Native C++20 Speculative Wavefront Engine</span>
           </div>
         </div>
 
@@ -240,97 +241,24 @@ export default function WorkPage() {
           </div>
         </section>
 
-        {/* Simulated Architecture (Open Ledgers + 1 Glass Virtual Fab Feature) */}
-        <section id="simulated-architecture" className={styles.section}>
-          <div className={styles.intro}>
-            <p className="eyebrow">Simulated Architecture</p>
-            <h2 className={styles.title}>
-              Virtual machines built to live inside our games.
+        {/* Closing Band: Separate Vision & Virtual Fab Routes */}
+        <section className={styles.closingBand}>
+          <div className={styles.closingCopy}>
+            <p className="eyebrow">Beyond the Workbench</p>
+            <h2 className={styles.closingTitle}>
+              Explore our simulated architectures &amp; Virtual Fab.
             </h2>
-            <p className={styles.lead}>
-              Everything below is a software simulation built in C++20 rather than physical fabricated hardware or a standalone operating system for real PCs. We build these simulated architectures so the computing worlds inside Silicon Emergence and Virtual Fab obey real computer-science rules.
+            <p className={styles.closingText}>
+              Read the dedicated Vision page for our separate <span className="mono">SERMM-16</span>, <span className="mono">SEVM &amp; FLUX</span>, and <span className="mono">EmergenceOS-16</span> proofs of concept alongside Virtual Fab.
             </p>
           </div>
-
-          <div className="open-row">
-            <div>
-              <p className={`mono ${styles.stepIdx}`}>
-                Simulated 16-bit RISC Architecture
-              </p>
-              <h3 className={styles.archTitle}>SERMM-16</h3>
-              <p className={styles.archMeta}>
-                Selion Emergent RISC Micro-Machines · C++20 Software Simulation
-              </p>
-            </div>
-            <div className={styles.archBody}>
-              <p>
-                An original 16-bit RISC instruction set and CPU architecture simulated inside Silicon Emergence over a unified 64 KB byte-addressed memory space. It provides eight ABI-aliased 16-bit registers, a 4-bit hardware flags register, and four uniform 16-bit instruction formats with consistent decoding positions.
-              </p>
-              <p>
-                To make programming inside the simulation feel genuine, we built both a host assembler and a compact 127-word self-hosted assembler (<span className="mono">serasm</span>) that assembles source text directly inside simulated RAM and runs it.
-              </p>
-            </div>
-          </div>
-
-          <div className="open-row">
-            <div>
-              <p className={`mono ${styles.stepIdx}`}>
-                Simulated 4-Lane Vector GPU
-              </p>
-              <h3 className={styles.archTitle}>SEVM &amp; FLUX</h3>
-              <p className={styles.archMeta}>
-                Selion Emergent Vector Machines · Simulated SoC Companion
-              </p>
-            </div>
-            <div className={styles.archBody}>
-              <p>
-                A simulated 4-lane lockstep SIMT vector processor sharing unified 64 KB memory with the SERMM-16 core, complete with per-lane vector registers, divergence masking, warp barriers, a 256-word on-chip scratchpad, cross-lane shuffles, and fused multiply-add instructions.
-              </p>
-              <p>
-                Through our <strong>FLUX</strong> kernel model, parallel vector programs are written alongside CPU assembly and dispatched across simulated waves.
-              </p>
-            </div>
-          </div>
-
-          <div className="open-row">
-            <div>
-              <p className={`mono ${styles.stepIdx}`}>
-                Simulated In-Game OS Disk Image
-              </p>
-              <h3 className={styles.archTitle}>EmergenceOS-16</h3>
-              <p className={styles.archMeta}>
-                EOS-16.serm · Runs strictly inside the SERMM-16 simulation
-              </p>
-            </div>
-            <div className={styles.archBody}>
-              <p>
-                Instead of hardcoding fake terminal responses inside C++, we created <span className="mono">EOS-16.serm</span>, a custom <span className="mono">.serm</span> simulated disk image format (not an <span className="mono">.iso</span>), so a blank simulated SERMM-16 machine boots its own kernel, pure assembly device drivers, interactive shell, and embedded filesystem from image data.
-              </p>
-              <p>
-                Because <span className="mono">EOS-16.serm</span> runs exclusively on the virtual SERMM-16 architecture inside our simulation, it is part of the in-game experience rather than a standalone download.
-              </p>
-            </div>
-          </div>
-
-          {/* Virtual Fab Feature Surface */}
-          <div id="virtual-fab" className={`optical-glass ${styles.vfabGlass}`}>
-            <div className={styles.vfabGrid}>
-              <div>
-                <p className="eyebrow">Silicon Manufacturing Simulator</p>
-                <h3 className={styles.sectionTitle}>Virtual Fab</h3>
-                <p className={styles.archMeta}>
-                  Playable Silicon Manufacturing Simulator
-                </p>
-              </div>
-              <div className={styles.archBody}>
-                <p>
-                  Virtual Fab explores the full physical journey of a chip, starting from Verilog netlists, stepping through simulated photolithography, etching, doping, and metallization, and packaging the finished die for interactive real-time simulation.
-                </p>
-                <p>
-                  Our goal is to make semiconductor fabrication feel tangible, visual, and playfully hands-on, bridging hardware engineering curiosity with the craft of building games.
-                </p>
-              </div>
-            </div>
+          <div className={styles.closingActions}>
+            <Link href="/vision" className="btn-primary">
+              Explore Vision →
+            </Link>
+            <Link href="/vision#virtual-fab" className="btn-glass">
+              Explore Virtual Fab
+            </Link>
           </div>
         </section>
       </div>

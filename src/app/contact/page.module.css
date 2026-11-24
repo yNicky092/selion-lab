@@ -36,12 +36,17 @@
 
 .directEmail {
   display: inline-block;
-  font-family: var(--font-display), sans-serif;
+  font-family: var(--font-body), system-ui, sans-serif;
   font-size: 1.55rem;
   font-weight: 500;
   color: var(--ink-1);
   text-decoration: underline;
   text-underline-offset: 6px;
+  transition: color 150ms ease;
+}
+
+.directEmail:hover {
+  color: var(--accent-ink);
 }
 
 .directNote {
@@ -86,10 +91,10 @@
   background: var(--field-bg);
   border: 1px solid var(--field-border);
   color: var(--ink-1);
-  font-family: var(--font-sans), sans-serif;
+  font-family: var(--font-body), system-ui, sans-serif;
   font-size: 0.94rem;
   outline: none;
-  transition: border-color 180ms ease;
+  transition: border-color 150ms ease, background-color 150ms ease;
 }
 
 .input:focus {

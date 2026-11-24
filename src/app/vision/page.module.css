@@ -90,6 +90,11 @@
   box-sizing: border-box;
   max-width: 100%;
   padding: clamp(1.5rem, 4vw, 3.2rem);
+  transition: border-color 150ms ease, transform 150ms ease;
+}
+
+.vfabGlass:hover {
+  border-color: var(--glass-rim);
 }
 
 .vfabTitle {

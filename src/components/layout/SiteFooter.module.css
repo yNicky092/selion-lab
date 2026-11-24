@@ -23,26 +23,57 @@
 .brandLink {
   display: inline-flex;
   align-items: center;
+  gap: 0.5rem;
+  transition: opacity 150ms ease;
 }
 
-.footerLockup {
+.brandLink:hover {
+  opacity: 0.85;
+}
+
+.footerMark {
   height: 22px;
-  width: auto;
+  width: 22px;
   object-fit: contain;
+}
+
+.footerWordmark {
+  font-family: var(--font-heading), system-ui, sans-serif;
+  font-size: 0.88rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  line-height: 1;
+  color: var(--ink-1);
 }
 
 .links {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: 1.5rem;
+  column-gap: 1.5rem;
+  row-gap: 0.5rem;
 }
 
 .link {
+  font-family: var(--font-body), system-ui, sans-serif;
   color: var(--ink-2);
-  transition: color 180ms ease;
+  transition: color 150ms ease;
 }
 
 .link:hover {
   color: var(--ink-1);
+}
+
+@media (max-width: 767px) {
+  .links {
+    column-gap: 1.25rem;
+    row-gap: 0.25rem;
+  }
+
+  .link {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+    padding-block: 10px;
+  }
 }

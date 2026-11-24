@@ -14,21 +14,22 @@ import {
 test("desktop navbar exposes required direct links", () => {
   const labels = DESKTOP_NAV_ITEMS.map((item) => item.label);
   assert.deepEqual(labels, [
-    "Silicon Emergence & Vision",
+    "Silicon Emergence",
+    "Vision",
     "Virtual Fab",
     "About",
   ]);
-  assert.equal(DESKTOP_NAV_ITEMS[1].href, "/work#virtual-fab");
+  assert.equal(DESKTOP_NAV_ITEMS[2].href, "/vision#virtual-fab");
 });
 
 test("mobile drawer and footer preserve all site routes", () => {
   const mobileHrefs = new Set(MOBILE_NAV_ITEMS.map((i) => i.href));
-  for (const required of ["/", "/work", "/work#virtual-fab", "/about", "/contact"]) {
+  for (const required of ["/", "/work", "/vision", "/vision#virtual-fab", "/about", "/contact"]) {
     assert.ok(mobileHrefs.has(required), `Missing mobile route ${required}`);
   }
 
   const footerHrefs = new Set(FOOTER_NAV_ITEMS.map((i) => i.href));
-  for (const required of ["/work", "/work#virtual-fab", "/about", "/contact"]) {
+  for (const required of ["/work", "/vision", "/vision#virtual-fab", "/about", "/contact"]) {
     assert.ok(footerHrefs.has(required), `Missing footer route ${required}`);
   }
 });

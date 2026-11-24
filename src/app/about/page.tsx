@@ -51,7 +51,7 @@ export default function AboutPage() {
           </p>
           <div className={styles.essayBody}>
             <p>
-              Selion Lab is an independent studio working at the crossroads of systems programming, visual craft, and interactive play. Our focus is on <strong>Silicon Emergence</strong>, the simulated <strong>SERMM-16 / SEVM / EOS-16</strong> stack running inside it, and <strong>Virtual Fab</strong>.
+              Selion Lab is an independent studio working at the crossroads of systems programming, visual craft, and interactive play. Our focus is on <strong>Silicon Emergence</strong>, our simulated architectures (<strong>SERMM-16</strong>, <strong>SEVM &amp; FLUX</strong>, and <strong>EmergenceOS-16</strong>), and <strong>Virtual Fab</strong>.
             </p>
             <p>
               We’re straightforward about what we build: our architectures are software simulations crafted for interactive play rather than physical consumer silicon, engineered with real computer-science rules from the ground up.

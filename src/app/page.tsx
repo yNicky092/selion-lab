@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { SIMULATED_ARCHITECTURES } from "@/lib/architecture";
 import styles from "./page.module.css";
 
 export default function HomePage() {
@@ -24,8 +25,8 @@ export default function HomePage() {
               <Link href="/work" className="btn-primary">
                 Explore Silicon Emergence
               </Link>
-              <Link href="/work#simulated-architecture" className="btn-glass">
-                Our Simulated Architecture
+              <Link href="/vision" className="btn-glass">
+                Explore Our Vision
               </Link>
             </div>
           </div>
@@ -40,9 +41,7 @@ export default function HomePage() {
                 priority
               />
               <div className="media-caption">
-                <span style={{ fontFamily: "var(--font-display)", fontWeight: 600 }}>
-                  Selion Lab
-                </span>
+                <span className={styles.captionBrand}>Selion Lab</span>
                 <span>Independent game craft · Real physics in software simulation</span>
               </div>
             </div>
@@ -131,7 +130,7 @@ export default function HomePage() {
                   height={714}
                 />
                 <div className="media-caption">
-                  <span>72 Levels · 6 Chapters + Infinite Sandbox</span>
+                  <span className="mono">72 Levels · 6 Chapters + Infinite Sandbox</span>
                   <span>Desktop &amp; Android</span>
                 </div>
               </div>
@@ -140,7 +139,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Simulated Machines & Virtual Fab: Open Editorial Rows */}
+      {/* Simulated Machines & Virtual Fab: Separate, Distinct Editorial Rows */}
       <section className={styles.section}>
         <div className="container">
           <div className={styles.sectionHeader}>
@@ -149,45 +148,53 @@ export default function HomePage() {
               Original simulated machines, and the fab that makes them.
             </h2>
             <p className={styles.sectionLead}>
-              None of these are physical consumer chips. They are original software architectures we design and simulate in C++20 to make our game worlds deeper and more believable.
+              None of these are physical consumer chips. They are original software architectures we design and simulate in <span className="mono">C++20</span> to make our game worlds deeper and more believable.
             </p>
           </div>
 
-          <div className="open-row">
-            <div>
-              <p className={`mono ${styles.pillarIdx}`}>
-                Software Simulation Inside Silicon Emergence
-              </p>
-              <h3 className={styles.rowTitle}>
-                SERMM-16, SEVM &amp; EmergenceOS-16
-              </h3>
-            </div>
-            <div>
-              <p className={styles.rowCopy}>
-                To make higher-level computing challenges genuinely programmable inside the game, we designed and verified our own simulated 16-bit RISC architecture (<strong>SERMM-16</strong>), a simulated 4-lane vector GPU (<strong>SEVM</strong> &amp; <strong>FLUX</strong>), a self-hosted assembler, and a simulated bare-metal OS disk image (<strong>EOS-16.serm</strong>).
-              </p>
-              <Link href="/work#simulated-architecture" className="text-action">
-                Read the architecture vision →
-              </Link>
-            </div>
-          </div>
+          {SIMULATED_ARCHITECTURES.map((arch) => (
+            <article key={arch.id} className={`open-row ${styles.archRow}`}>
+              <div>
+                <p className={`mono ${styles.pillarIdx}`}>
+                  {arch.index} · {arch.category}
+                </p>
+                <h3 className={styles.rowTitle}>{arch.title}</h3>
+                <p className={styles.rowMeta}>{arch.meta}</p>
+                <p className={`mono ${styles.rowSpecs}`}>
+                  {arch.specs.join(" · ")}
+                </p>
+              </div>
+              <div>
+                <p className={styles.rowCopy}>{arch.homeSummary}</p>
+                <Link href={arch.href} className="text-action">
+                  {arch.ctaLabel}
+                </Link>
+              </div>
+            </article>
+          ))}
 
-          <div className="open-row">
+          <article className={`open-row ${styles.archRow}`}>
             <div>
               <p className={`mono ${styles.pillarIdx}`}>
-                Silicon Manufacturing Simulator
+                04 · Silicon Manufacturing Simulator
               </p>
               <h3 className={styles.rowTitle}>Virtual Fab</h3>
+              <p className={styles.rowMeta}>
+                Playable Silicon Manufacturing Simulator
+              </p>
+              <p className={`mono ${styles.rowSpecs}`}>
+                Verilog Netlists · Simulated Fabrication · Wafer Packaging
+              </p>
             </div>
             <div>
               <p className={styles.rowCopy}>
                 A tactile silicon manufacturing simulator that begins with Verilog netlists, steps through simulated fabrication and wafer packaging, and lets you drop the finished chip straight into real-time simulation.
               </p>
-              <Link href="/work#virtual-fab" className="text-action">
+              <Link href="/vision#virtual-fab" className="text-action">
                 Explore Virtual Fab →
               </Link>
             </div>
-          </div>
+          </article>
         </div>
       </section>
 
