@@ -188,6 +188,20 @@ export default function RootLayout({
       lang="en"
       className={`${plusJakartaSans.variable} ${ibmPlexMono.variable}`}
     >
+      <head>
+        <script
+          async
+          src="https://www.googletagmanager.com/gtm.js?id=GTM-TLHH2RW6"
+        />
+        <script
+          id="google-tag-gtm"
+          dangerouslySetInnerHTML={{
+            __html: `window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());`,
+          }}
+        />
+      </head>
       <body>
         <script
           type="application/ld+json"
